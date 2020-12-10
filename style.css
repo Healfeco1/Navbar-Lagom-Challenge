@@ -110,11 +110,7 @@ li span{
     margin: 0 auto;
     width: 50%;
 }
-#menuToggle input:checked ~ body
-{
-  opacity: 1
-}
 
 .menu-open {
     background-color: rgba(0,0,0,0.3);
-  }
+}
