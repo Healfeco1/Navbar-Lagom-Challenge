@@ -1,0 +1,120 @@
+@import url('https://rsms.me/inter/inter.css');
+body
+{
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+li span{
+    font-size: 14px;
+    color: #FFF;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #FFFFFF
+  ;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: #223322;
+}
+
+#menuToggle input, .circulo .circuloTransparente
+{
+  display: block;
+  width: 40px;
+  height: 38px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+.circulo
+{
+  width: 25px;
+  height: 25px;
+  top: -7px;
+  left: -5px;
+  background-color: #EC2C2C;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.circuloTransparente
+{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 5px solid #FFFFFF;
+}
+
+.menu
+{
+  position: absolute;
+  width: 600px;
+  height: 1000px;
+  margin: -100px 0 0 -50px;
+  padding: 100px;
+  padding-top: 125px;
+  background: #EC2C2C;
+  list-style-type: none;
+  /* Suaviza el rederizado de las fuentes -> antialiased -> Texto claro para fondos obscuros */
+  -webkit-font-smoothing: antialiased;
+  /* transform-origin: 0% 0%; */
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+.menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+.svgImage{
+    margin: 0 auto;
+    width: 50%;
+}
+#menuToggle input:checked ~ body
+{
+  opacity: 1
+}
+
+.menu-open {
+    background-color: rgba(0,0,0,0.3);
+  }
